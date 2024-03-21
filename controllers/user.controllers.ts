@@ -39,7 +39,7 @@ const postUsers = async (req: Request, res: Response) => {
       });
     }
 
-    const newUser = new UserModel(body);
+    const newUser = new UserModel();
     await newUser.save();
 
     res.json(newUser);
